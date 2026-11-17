@@ -1,78 +1,523 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World | Portfolio</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: #0f172a;
-      color: #f8fafc;
-      text-align: center;
-      padding: 1.5rem;
-    }
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 1rem;
-      padding: 3rem 2.5rem;
-      max-width: 500px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -0.025em;
-      margin-bottom: 0.75rem;
-      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    p {
-      color: #94a3b8;
-      font-size: 1.125rem;
-      line-height: 1.6;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      background: rgba(34, 197, 94, 0.1);
-      border: 1px solid rgba(34, 197, 94, 0.2);
-      color: #4ade80;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    .dot {
-      width: 0.5rem;
-      height: 0.5rem;
-      border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 12px #22c55e;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jay Chandak — AI &amp; full-stack engineer, Mumbai</title>
+  <meta name="description" content="Jay Chandak builds software that has to think — retrieval systems, pricing engines, agents — and the interfaces that make that thinking legible. Final-year B.Tech AI & ML, Mumbai.">
+  <meta name="theme-color" content="#F2EDE3">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jay Chandak — AI & full-stack engineer">
+  <meta property="og:description" content="Retrieval systems, pricing engines, agents, and the interfaces around them. Mumbai.">
+  <meta property="og:image" content="/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/assets/fonts/anek-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="/assets/js/site.js" defer></script>
 </head>
 <body>
-  <div class="card">
-    <h1>Hello, World!</h1>
-    <p>Portfolio site deployed and ready for Vercel.</p>
-    <div class="badge">
-      <span class="dot"></span> Live on Vercel
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ───────────── Route bar: navigation + reading progress ───────────── -->
+  <header class="routebar">
+    <div class="routebar__inner">
+      <a class="mark" href="#start" aria-label="Jay Chandak — back to top">
+        <span class="mark__plate" aria-hidden="true">JC</span>
+        <span class="mark__name">Jay Chandak</span>
+      </a>
+
+      <nav class="route" aria-label="Sections">
+        <span class="route__track" aria-hidden="true"><span class="route__fill"></span></span>
+        <ol class="route__stops">
+          <li><a href="#start" class="route__stop"><span class="route__dot" aria-hidden="true"></span><span class="route__label">Start</span></a></li>
+          <li><a href="#departures" class="route__stop"><span class="route__dot" aria-hidden="true"></span><span class="route__label">Work</span></a></li>
+          <li><a href="#the-line" class="route__stop"><span class="route__dot" aria-hidden="true"></span><span class="route__label">Line</span></a></li>
+          <li><a href="#about" class="route__stop"><span class="route__dot" aria-hidden="true"></span><span class="route__label">About</span></a></li>
+          <li><a href="#ticket" class="route__stop"><span class="route__dot" aria-hidden="true"></span><span class="route__label">Ticket</span></a></li>
+        </ol>
+      </nav>
+
+      <p class="clock" aria-live="off">
+        <span class="clock__city">Mumbai</span>
+        <time class="clock__time" data-clock>—:—</time>
+        <span class="clock__zone">IST</span>
+      </p>
     </div>
-  </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ───────────── 00 · Station sign ───────────── -->
+    <section class="hero wrap" id="start" aria-labelledby="hero-title">
+      <div class="sign">
+        <div class="sign__plate">
+          <p class="sign__deva" lang="hi" aria-hidden="true">जय चांडक</p>
+          <h1 class="sign__name" id="hero-title">Jay Chandak</h1>
+          <span class="sign__code" aria-hidden="true">JC</span>
+        </div>
+        <div class="sign__legs" aria-hidden="true"><span></span><span></span></div>
+      </div>
+
+      <div class="hero__body">
+        <p class="hero__lede">
+          I build software that has to <em>think</em> — retrieval systems, pricing engines,
+          agents that answer email — and the interfaces that make that thinking
+          legible to the people relying on it.
+        </p>
+
+        <dl class="hero__facts">
+          <div><dt>Studying</dt><dd>B.Tech, AI &amp; ML · DJ Sanghvi College of Engineering · ’27</dd></div>
+          <div><dt>Previously</dt><dd>AI / full-stack intern, Oddly AI</dd></div>
+          <div><dt>Based</dt><dd>Mumbai · 19.07° N, 72.87° E</dd></div>
+          <div><dt>Right now</dt><dd data-status>Probably building something.</dd></div>
+        </dl>
+      </div>
+
+      <p class="hero__next">
+        <span class="hero__next-label">Next</span>
+        <a href="#departures">Seven departures, boarding below <span aria-hidden="true">↓</span></a>
+      </p>
+    </section>
+
+    <!-- ───────────── 01 · Departures ───────────── -->
+    <section class="section wrap" id="departures" aria-labelledby="dep-title">
+      <header class="section__head">
+        <span class="section__no" aria-hidden="true">01</span>
+        <h2 class="section__title" id="dep-title">Departures</h2>
+        <span class="section__deva" lang="hi" aria-hidden="true">प्रस्थान</span>
+        <p class="section__note">Things I’ve built. Open any service to see the route it runs.</p>
+      </header>
+
+      <div class="lines" role="group" aria-label="Filter projects by line" hidden>
+        <span class="lines__label">Lines</span>
+        <button type="button" class="lines__btn" data-line="all" aria-pressed="true">All</button>
+        <button type="button" class="lines__btn" data-line="ai" aria-pressed="false"><span class="pill pill--ai" aria-hidden="true">AI</span>AI / ML</button>
+        <button type="button" class="lines__btn" data-line="be" aria-pressed="false"><span class="pill pill--be" aria-hidden="true">BE</span>Backend</button>
+        <button type="button" class="lines__btn" data-line="ui" aria-pressed="false"><span class="pill pill--ui" aria-hidden="true">UI</span>Interface</button>
+        <button type="button" class="lines__btn" data-line="da" aria-pressed="false"><span class="pill pill--da" aria-hidden="true">DA</span>Data</button>
+        <p class="lines__count" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="board">
+        <div class="board__head" aria-hidden="true">
+          <span>No.</span><span>Service</span><span>Lines</span><span>Via</span><span>Status</span>
+        </div>
+
+        <!-- 01 Sekhmet -->
+        <details class="svc" id="sekhmet" data-lines="ai be">
+          <summary>
+            <span class="svc__row">
+              <span class="svc__no">01</span>
+              <span class="svc__name">
+                <strong>Sekhmet</strong>
+                <span class="svc__tag">A RAG system that decides how to remember.</span>
+              </span>
+              <span class="svc__lines"><span class="pill pill--ai" title="AI / ML">AI</span><span class="pill pill--be" title="Backend">BE</span></span>
+              <span class="svc__via">FastAPI · Neo4j · ChromaDB</span>
+              <span class="svc__status">2026</span>
+              <span class="svc__toggle" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="svc__body" style="--line: var(--ai)">
+            <div class="svc__text">
+              <p class="svc__problem"><span>The problem</span>Multi-turn LLM conversations drift. They lose what was settled three turns ago and fill the gap with confident fiction.</p>
+              <p>A hybrid-RAG platform where a <b>Planner Agent</b> reads each query’s intent, breaks multi-step questions apart, and chooses where to look: semantic neighbours in ChromaDB, explicit relationships in a Neo4j knowledge graph, or both. Memory updates run as async background tasks, so answers never wait on bookkeeping; Supabase Postgres sits behind a connection pool.</p>
+            </div>
+            <ol class="diagram" aria-label="Sekhmet architecture, as a route">
+              <li><b>Query</b><small>multi-turn</small></li>
+              <li><b>Planner agent</b><small>intent · decomposition</small></li>
+              <li class="fork"><span><b>ChromaDB</b><small>semantic</small></span><span><b>Neo4j</b><small>GraphRAG</small></span></li>
+              <li><b>Grounded context</b><small>Gemini</small></li>
+              <li class="end"><b>Answer</b><small>+ async memory sync</small></li>
+            </ol>
+            <ul class="figs">
+              <li><b>2</b><span>retrieval paths, chosen per query</span></li>
+              <li><b>async</b><span>memory sync off the answer path</span></li>
+              <li><b>pooled</b><span>Postgres connections via Supabase</span></li>
+            </ul>
+            <p class="svc__links"><a href="https://github.com/kryptobolt07/neurohack">Source on GitHub <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </details>
+
+        <!-- 02 StockPulse -->
+        <details class="svc" id="stockpulse" data-lines="be ai da ui">
+          <summary>
+            <span class="svc__row">
+              <span class="svc__no">02</span>
+              <span class="svc__name">
+                <strong>StockPulse</strong>
+                <span class="svc__tag">A pricing engine that notices before you do.</span>
+              </span>
+              <span class="svc__lines"><span class="pill pill--be" title="Backend">BE</span><span class="pill pill--ai" title="AI / ML">AI</span><span class="pill pill--da" title="Data">DA</span><span class="pill pill--ui" title="Interface">UI</span></span>
+              <span class="svc__via">Java 21 · Spring Boot 3 · SSE</span>
+              <span class="svc__status">2026</span>
+              <span class="svc__toggle" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="svc__body" style="--line: var(--be)">
+            <div class="svc__text">
+              <p class="svc__problem"><span>The problem</span>Inventory distortion — too much of what doesn’t sell, too little of what does — costs retail about $1.1 trillion, and most repricing still reacts days late.</p>
+              <p>An event-driven decision engine built with Domain-Driven Design. Orders are written in under 10&nbsp;ms; the thinking happens afterwards, off the request path. When demand velocity runs past twice its category benchmark, or stock breaches its floor, Gemini 2.5 Flash weighs margin elasticity against stockout runway and proposes a price and a replenishment batch — which is then clamped to sane bounds before anything ships. A pluggable Strategy Pattern swaps <code>AI_POWERED</code> for <code>RULE_BASED</code>, and a Time-Machine lab compresses a day into a minute so you can watch it work.</p>
+            </div>
+            <ol class="diagram" aria-label="StockPulse architecture, as a route">
+              <li><b>Order in</b><small>REST · &lt;10 ms</small></li>
+              <li><b>@Async event</b><small>off the request path</small></li>
+              <li class="fork"><span><b>Velocity &gt;2×</b><small>surge</small></span><span><b>Low stock</b><small>floor breach</small></span></li>
+              <li class="fork"><span><b>AI_POWERED</b><small>Gemini 2.5</small></span><span><b>RULE_BASED</b><small>fallback</small></span></li>
+              <li><b>Clamp</b><small>0.3× – 3.0×</small></li>
+              <li class="end"><b>Live board</b><small>SSE → React</small></li>
+            </ol>
+            <ul class="figs">
+              <li><b>&lt;10 ms</b><span>transactional order ingestion</span></li>
+              <li><b>0.3–3×</b><span>hard clamp on any suggested price</span></li>
+              <li><b>9/9</b><span>JUnit 5 + Mockito tests passing</span></li>
+              <li><b>1d = 1m</b><span>time-machine simulation lab</span></li>
+            </ul>
+            <p class="svc__links"><a href="https://github.com/kryptobolt07/stockpulse">Source on GitHub <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </details>
+
+        <!-- 03 ArtVistas -->
+        <details class="svc" id="artvistas" data-lines="ui">
+          <summary>
+            <span class="svc__row">
+              <span class="svc__no">03</span>
+              <span class="svc__name">
+                <strong>ArtVistas</strong>
+                <span class="svc__tag">A gallery you walk through in a browser tab.</span>
+              </span>
+              <span class="svc__lines"><span class="pill pill--ui" title="Interface">UI</span></span>
+              <span class="svc__via">Three.js · GSAP · React</span>
+              <span class="svc__status svc__status--live">Live</span>
+              <span class="svc__toggle" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="svc__body" style="--line: var(--ui)">
+            <div class="svc__text">
+              <p class="svc__problem"><span>The problem</span>Online exhibitions are usually a grid of thumbnails. Art deserves rooms.</p>
+              <p>A virtual museum rendered in WebGL: curated spatial exhibitions you move through with your scroll. GSAP timelines and ScrollTrigger choreograph the camera, Framer Motion handles the interface, and ambient lighting does quiet work in the background. Audited in Lighthouse until asset loading, the render pipeline and Core Web Vitals all held up at 60 fps.</p>
+            </div>
+            <ol class="diagram" aria-label="ArtVistas architecture, as a route">
+              <li><b>Scroll</b><small>input</small></li>
+              <li><b>ScrollTrigger</b><small>progress</small></li>
+              <li><b>GSAP timeline</b><small>staggered</small></li>
+              <li><b>Camera path</b><small>Three.js</small></li>
+              <li class="end"><b>Frame</b><small>WebGL · 60 fps</small></li>
+            </ol>
+            <ul class="figs">
+              <li><b>60 fps</b><span>held through scroll-driven camera moves</span></li>
+              <li><b>3D</b><span>spatial rooms, not a thumbnail grid</span></li>
+            </ul>
+            <p class="svc__links">
+              <a href="https://artvistas-i6sk.vercel.app/">Visit the gallery <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/kryptobolt07/artvistas">Source <span aria-hidden="true">↗</span></a>
+            </p>
+          </div>
+        </details>
+
+        <!-- 04 Competitor Spy -->
+        <details class="svc" id="competitor-spy" data-lines="da ai be ui">
+          <summary>
+            <span class="svc__row">
+              <span class="svc__no">04</span>
+              <span class="svc__name">
+                <strong>Competitor Spy</strong>
+                <span class="svc__tag">Reading the competition so you don’t have to.</span>
+              </span>
+              <span class="svc__lines"><span class="pill pill--da" title="Data">DA</span><span class="pill pill--ai" title="AI / ML">AI</span><span class="pill pill--be" title="Backend">BE</span><span class="pill pill--ui" title="Interface">UI</span></span>
+              <span class="svc__via">SentenceTransformers · FastAPI · Recharts</span>
+              <span class="svc__status">2026</span>
+              <span class="svc__toggle" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="svc__body" style="--line: var(--da)">
+            <div class="svc__text">
+              <p class="svc__problem"><span>The problem</span>Creators guess what to make next. The answer is usually sitting in what everyone else has already made.</p>
+              <p>An intelligence platform that pulls competitor media through the YouTube Data API, embeds it with <code>all-MiniLM-L6-v2</code>, and ranks by cosine similarity to surface topic clusters and the gaps between them. A two-tier cache — in-memory LRU over a SQLite store with TTL expiry — stops the model from re-answering questions it already answered. A React + Recharts dashboard turns it into KPIs a person can act on.</p>
+            </div>
+            <ol class="diagram" aria-label="Competitor Spy architecture, as a route">
+              <li><b>YouTube API</b><small>ingest</small></li>
+              <li><b>Embed</b><small>MiniLM-L6 · 384-d</small></li>
+              <li class="fork"><span><b>LRU</b><small>in memory</small></span><span><b>SQLite</b><small>TTL cache</small></span></li>
+              <li><b>Rank</b><small>cosine similarity</small></li>
+              <li class="end"><b>Dashboard</b><small>clusters · gaps</small></li>
+            </ol>
+            <ul class="figs">
+              <li><b>−60%</b><span>API latency after the cache layer</span></li>
+              <li><b>384-d</b><span>sentence embeddings per item</span></li>
+              <li><b>2-tier</b><span>LRU in memory, TTL on disk</span></li>
+            </ul>
+            <p class="svc__links"><a href="https://github.com/kryptobolt07/recursion">Source on GitHub <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </details>
+
+        <!-- 05 Reddit Tweaks -->
+        <details class="svc" id="reddit-tweaks" data-lines="ui da">
+          <summary>
+            <span class="svc__row">
+              <span class="svc__no">05</span>
+              <span class="svc__name">
+                <strong>Reddit Tweaks</strong>
+                <span class="svc__tag">A weekend fix that kept getting releases.</span>
+              </span>
+              <span class="svc__lines"><span class="pill pill--ui" title="Interface">UI</span><span class="pill pill--da" title="Data">DA</span></span>
+              <span class="svc__via">WebExtension · IndexedDB</span>
+              <span class="svc__status svc__status--live">v0.41</span>
+              <span class="svc__toggle" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="svc__body" style="--line: var(--ui)">
+            <div class="svc__text">
+              <p class="svc__problem"><span>The problem</span>Reddit forgets what you’ve read, makes old chats nearly unsearchable, and rarely tells you when your post was quietly removed.</p>
+              <p>A Chromium and Firefox extension that adds the missing memory: viewed-post history with no fixed limit, search across chats, profile discovery, bulk redaction of your own posts and comments, comment raffles, and optional checks that flag content of yours a signed-out visitor can’t see. It works with Reddit’s own interface rather than replacing it, and storage is local-first — extension-owned IndexedDB, bounded caches and a clear-data switch.</p>
+            </div>
+            <ol class="diagram" aria-label="Reddit Tweaks architecture, as a route">
+              <li><b>Reddit</b><small>native UI</small></li>
+              <li><b>Content scripts</b><small>observe, don’t replace</small></li>
+              <li><b>IndexedDB</b><small>local-first</small></li>
+              <li class="fork"><span><b>History</b><small>no limit</small></span><span><b>Search</b><small>chats · profiles</small></span></li>
+              <li class="end"><b>Popup</b><small>Chrome · Firefox</small></li>
+            </ol>
+            <ul class="figs">
+              <li><b>0.41</b><span>current preview release</span></li>
+              <li><b>2</b><span>engines: Chromium, Firefox 140+ &amp; Android 142+</span></li>
+            </ul>
+            <p class="svc__links"><a href="https://github.com/kryptobolt07/reddittweaks">Source on GitHub <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </details>
+
+        <!-- 06 Email Agent -->
+        <details class="svc" id="email-agent" data-lines="ai be">
+          <summary>
+            <span class="svc__row">
+              <span class="svc__no">06</span>
+              <span class="svc__name">
+                <strong>Email Workflow Agent</strong>
+                <span class="svc__tag">Drafts the reply. Waits for a human.</span>
+              </span>
+              <span class="svc__lines"><span class="pill pill--ai" title="AI / ML">AI</span><span class="pill pill--be" title="Backend">BE</span></span>
+              <span class="svc__via">FastAPI · Next.js · Composio</span>
+              <span class="svc__status">2025</span>
+              <span class="svc__toggle" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="svc__body" style="--line: var(--ai)">
+            <div class="svc__text">
+              <p class="svc__problem"><span>The problem</span>Support inboxes are full of questions that have already been answered — but an unchecked AI reply is how a company ends up in the news.</p>
+              <p>An agentic workflow that ingests customer threads from Microsoft 365 Outlook and Google Workspace through Composio OAuth, works out what’s being asked, and drafts a policy-compliant reply through structured prompt pipelines and tool calls. Nothing is sent until a person approves it in a Next.js review queue, and every decision lands in an audit log.</p>
+            </div>
+            <ol class="diagram" aria-label="Email agent architecture, as a route">
+              <li class="fork"><span><b>Outlook</b><small>M365</small></span><span><b>Gmail</b><small>Workspace</small></span></li>
+              <li><b>Composio</b><small>OAuth · tools</small></li>
+              <li><b>Intent</b><small>parse · decompose</small></li>
+              <li><b>Draft</b><small>policy-bound</small></li>
+              <li><b>Human review</b><small>Next.js</small></li>
+              <li class="end"><b>Send</b><small>+ audit log</small></li>
+            </ol>
+            <ul class="figs">
+              <li><b>2</b><span>mail ecosystems behind one agent</span></li>
+              <li><b>0</b><span>replies sent without human approval</span></li>
+            </ul>
+            <p class="svc__links"><a href="https://github.com/kryptobolt07/email_frontend">Source on GitHub <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </details>
+
+        <!-- 07 Lumina -->
+        <details class="svc" id="lumina" data-lines="ui ai">
+          <summary>
+            <span class="svc__row">
+              <span class="svc__no">07</span>
+              <span class="svc__name">
+                <strong>Lumina</strong>
+                <span class="svc__tag">Speech games for dyslexic kids, built in 24 hours.</span>
+              </span>
+              <span class="svc__lines"><span class="pill pill--ui" title="Interface">UI</span><span class="pill pill--ai" title="AI / ML">AI</span></span>
+              <span class="svc__via">React · Web Audio · Gemini</span>
+              <span class="svc__status">2025</span>
+              <span class="svc__toggle" aria-hidden="true"></span>
+            </span>
+          </summary>
+          <div class="svc__body" style="--line: var(--ui)">
+            <div class="svc__text">
+              <p class="svc__problem"><span>The problem</span>Phonics practice is repetitive, and for dyslexic children repetition without feedback quickly turns into discouragement.</p>
+              <p>Built with team Syntax Squad in a 24-hour hackathon at VESIT. A child says the word; the Web Audio API captures it; Gemini judges the attempt in real time; the next round gets a little easier or a little harder. The interface is high-contrast and low-clutter by design, and MongoDB keeps each child’s sessions and progression.</p>
+            </div>
+            <ol class="diagram" aria-label="Lumina architecture, as a route">
+              <li><b>Child speaks</b><small>mic</small></li>
+              <li><b>Web Audio</b><small>capture</small></li>
+              <li><b>Gemini</b><small>evaluates</small></li>
+              <li><b>Difficulty</b><small>adapts</small></li>
+              <li class="end"><b>Progress</b><small>MongoDB</small></li>
+            </ol>
+            <ul class="figs">
+              <li><b>24 h</b><span>from idea to working MVP</span></li>
+              <li><b>live</b><span>voice feedback, every attempt</span></li>
+            </ul>
+            <p class="svc__links"><a href="https://github.com/VESHackIT/VESHackIT_Syntax-Squad_Dhruv-Chotalia_SW-01">Source on GitHub <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </details>
+      </div>
+
+      <p class="board__foot">
+        Sidings, experiments and half-finished ideas are on
+        <a href="https://github.com/kryptobolt07">github.com/kryptobolt07</a>.
+      </p>
+    </section>
+
+    <!-- ───────────── 02 · The line so far ───────────── -->
+    <section class="section wrap" id="the-line" aria-labelledby="line-title">
+      <header class="section__head">
+        <span class="section__no" aria-hidden="true">02</span>
+        <h2 class="section__title" id="line-title">The line so far</h2>
+        <span class="section__deva" lang="hi" aria-hidden="true">प्रवास</span>
+        <p class="section__note">Stations, in order. The next one isn’t on the map yet.</p>
+      </header>
+
+      <ol class="strip">
+        <li class="strip__stop">
+          <span class="strip__when">2023 · Nashik</span>
+          <b>Class XII, CBSE</b>
+          <span class="strip__what">Science · 94.4%</span>
+        </li>
+        <li class="strip__stop">
+          <span class="strip__when">2023 · Mumbai</span>
+          <b>B.Tech, AI &amp; ML</b>
+          <span class="strip__what">DJ Sanghvi College of Engineering · CGPA 9.07</span>
+        </li>
+        <li class="strip__stop">
+          <span class="strip__when">Mar 2025</span>
+          <b>Lumina</b>
+          <span class="strip__what">24-hour hackathon, VESIT</span>
+        </li>
+        <li class="strip__stop strip__stop--interchange">
+          <span class="strip__when">Apr – Oct 2025</span>
+          <b>Oddly AI</b>
+          <span class="strip__what">Intern, AI / full-stack engineer</span>
+        </li>
+        <li class="strip__stop strip__stop--now">
+          <span class="strip__here">You are here</span>
+          <span class="strip__when">2026</span>
+          <b>Five services</b>
+          <span class="strip__what">Sekhmet, Competitor Spy, StockPulse, ArtVistas, Reddit Tweaks</span>
+        </li>
+        <li class="strip__stop strip__stop--next">
+          <span class="strip__when">2027</span>
+          <b>Graduation</b>
+          <span class="strip__what">B.Tech, AI &amp; ML</span>
+        </li>
+        <li class="strip__stop strip__stop--open">
+          <span class="strip__when">Next station</span>
+          <b><a href="#ticket">Your team?</a></b>
+          <span class="strip__what">Internships &amp; graduate roles</span>
+        </li>
+      </ol>
+
+      <article class="stint" aria-labelledby="oddly-title">
+        <header class="stint__head">
+          <p class="stint__when">April – October 2025 · six months · remote / Mumbai</p>
+          <h3 id="oddly-title">Oddly AI <span>Intern, AI / full-stack engineer</span></h3>
+          <p class="stint__summary">Six months on a small team shipping document intelligence — the kind of work where a hallucinated number on a tax form is not a quirk but a bug. Most of what I learned about guardrails, I learned here.</p>
+        </header>
+        <ul class="stint__list">
+          <li><span class="pill pill--be" title="Backend">BE</span><p>Wrote the official <b>Python SDK</b> for the company’s document and financial-statement extraction APIs — REST connectors, Pydantic models, mock test servers and automated PyTest suites.</p></li>
+          <li><span class="pill pill--be" title="Backend">BE</span><p>Built an <b>IRS Form 1040</b> auto-filling service in FastAPI, with strict input schemas, field-level validation and error-handling guardrails against hallucinated values. Containerised with Docker.</p></li>
+          <li><span class="pill pill--ai" title="AI / ML">AI</span><p>Engineered <b>multimodal extraction pipelines</b> — Gemini vision plus LLMs — that turn unstructured PDF and image invoices and bank statements into normalised schemas.</p></li>
+          <li><span class="pill pill--ai" title="AI / ML">AI</span><p>Developed an <b>event-driven email agent</b> that classifies inbound intent and drafts replies that follow enterprise communication guidelines.</p></li>
+          <li><span class="pill pill--ui" title="Interface">UI</span><p>Translated Figma into <b>accessible React + TypeScript</b> interfaces from 360&nbsp;px up, and lifted Lighthouse to <b>90+</b> with route-level code splitting, lazy loading and layout-shift fixes.</p></li>
+          <li><span class="pill pill--da" title="Data">DA</span><p>Built <b>ETL pipelines</b> that pull tabular data out of unstandardised invoices into clean CSV / Excel, and dashboards tracking extraction throughput, error rates and data quality.</p></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- ───────────── 03 · About ───────────── -->
+    <section class="section wrap" id="about" aria-labelledby="about-title">
+      <header class="section__head">
+        <span class="section__no" aria-hidden="true">03</span>
+        <h2 class="section__title" id="about-title">About</h2>
+        <span class="section__deva" lang="hi" aria-hidden="true">परिचय</span>
+      </header>
+
+      <div class="about">
+        <div class="about__prose">
+          <p class="about__big">I’m Jay — a final-year AI &amp; ML student in Mumbai who likes the unglamorous half of intelligent systems: the guardrails, the caches, the fallbacks, the review screens.</p>
+          <p>Models are getting very good at answering. I’m interested in what makes those answers safe to act on — and fast enough that nobody notices the machinery. Most of my projects end up the same shape: something quick at the front, something careful behind it, and a person somewhere in the loop.</p>
+          <p>I also can’t leave an interface alone. That’s how a WebGL gallery got its camera choreography, and how a small fix for Reddit turned into a browser extension now on release 0.41.</p>
+        </div>
+
+        <aside class="notice" aria-labelledby="notice-title">
+          <h3 class="notice__title" id="notice-title">Notice to passengers</h3>
+          <p class="notice__sub">Standing rules I build by</p>
+          <ol class="notice__list">
+            <li><b>Fast path, slow path.</b> Keep the request quick; do the thinking off it.</li>
+            <li><b>Clamp the model.</b> Every AI output gets bounds, a fallback, or a reviewer.</li>
+            <li><b>Choose the retrieval.</b> Vectors and graphs answer different questions.</li>
+            <li><b>Never compute twice.</b> Cache what the system has already learned.</li>
+            <li><b>Accessible by default.</b> Not a feature, not a final sprint.</li>
+          </ol>
+        </aside>
+      </div>
+
+      <div class="stock" aria-labelledby="stock-title">
+        <h3 class="stock__title" id="stock-title">Rolling stock</h3>
+        <dl class="stock__grid">
+          <div><dt><span class="pill pill--ai" aria-hidden="true">AI</span>Intelligence</dt><dd>Gemini · RAG &amp; GraphRAG · agents &amp; tool calling · SentenceTransformers · prompt pipelines</dd></div>
+          <div><dt><span class="pill pill--be" aria-hidden="true">BE</span>Backend</dt><dd>Python · FastAPI · Java 21 · Spring Boot 3 · PostgreSQL · Neo4j · ChromaDB · MongoDB · Docker</dd></div>
+          <div><dt><span class="pill pill--ui" aria-hidden="true">UI</span>Interface</dt><dd>TypeScript · React · Next.js · Three.js · GSAP · Tailwind · Figma · WCAG</dd></div>
+          <div><dt><span class="pill pill--da" aria-hidden="true">DA</span>Data</dt><dd>SQL · Pandas · ETL · Recharts · Power BI · EDA</dd></div>
+          <div><dt><span class="pill pill--neutral" aria-hidden="true">QA</span>Testing &amp; tooling</dt><dd>PyTest · JUnit 5 · Mockito · Git · Claude Code · Cursor</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────────── 04 · Ticket ───────────── -->
+    <section class="section wrap" id="ticket" aria-labelledby="ticket-title">
+      <header class="section__head">
+        <span class="section__no" aria-hidden="true">04</span>
+        <h2 class="section__title" id="ticket-title">Ticket</h2>
+        <span class="section__deva" lang="hi" aria-hidden="true">संपर्क</span>
+        <p class="section__note">Got a role, a project, or a problem with a graph in it? Write to me.</p>
+      </header>
+
+      <div class="ticket">
+        <div class="ticket__main">
+          <p class="ticket__kind">Single journey · any class</p>
+          <p class="ticket__route">
+            <span><small>From</small>Wherever you are</span>
+            <span class="ticket__arrow" aria-hidden="true"></span>
+            <span><small>To</small>Mumbai, IST</span>
+          </p>
+          <p class="ticket__mail">
+            <a href="mailto:jay.chandak28@gmail.com" data-email>jay.chandak28@gmail.com</a>
+            <button type="button" class="ticket__copy" data-copy="jay.chandak28@gmail.com" hidden>Copy address</button>
+          </p>
+          <p class="ticket__feedback" role="status" aria-live="polite"></p>
+        </div>
+        <div class="ticket__stub">
+          <span class="ticket__punch" aria-hidden="true"></span>
+          <p class="ticket__no"><small>No.</small>JC&#8209;2027</p>
+          <ul class="ticket__links">
+            <li><a href="https://www.linkedin.com/in/jaychandak007/">LinkedIn <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://github.com/kryptobolt07">GitHub <span aria-hidden="true">↗</span></a></li>
+          </ul>
+          <p class="ticket__valid"><small>Valid</small>until answered</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot wrap">
+    <div class="foot__inner">
+    <p class="foot__announce"><span lang="mr">पुढील स्टेशन</span> — next station: <a href="#start">back to the start</a>.</p>
+    <p class="foot__colophon">
+      Set in Anek Latin &amp; Anek Devanagari by Ek Type, Mumbai, with Newsreader and IBM Plex Mono.
+      Written by hand in HTML, CSS and a little JavaScript. No frameworks were harmed.
+    </p>
+    <p class="foot__meta">© 2026 Jay Chandak</p>
+    </div>
+  </footer>
 </body>
 </html>
